@@ -64,4 +64,7 @@ cat /etc/ssh/ssh_host_key.pub
 cat /etc/ssh/ssh_host_key
 ```
 
+
+## Automated enumeration
+
 ## Privesc
