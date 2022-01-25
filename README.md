@@ -68,8 +68,11 @@ cat /etc/ssh/ssh_host_key
 ## Automated enumeration
 
 <https://github.com/rebootuser/LinEnum>
+
 <https://github.com/reider-roque/linpostexp/blob/master/linprivchecker.py>
+
 <http://pentestmonkey.net/tools/audit/unix-privesc-check>
+
 <https://raw.githubusercontent.com/swarley7/linuxprivchecker/master/linuxprivchecker.py>
 
 ## Sudoers - Privesc
