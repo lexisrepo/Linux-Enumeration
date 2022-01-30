@@ -143,4 +143,4 @@ sudo mail --exec='!/bin/bash'
 ```
 
 
-## Contrab - Privesc
+## Crontab - Privesc
