@@ -56,8 +56,9 @@ sudo mail --exec='!/bin/bash'
 
 ## DirtyCow
 
-https://dirtycow.ninja/
-https://github.com/FireFart/dirtycow/blob/master/dirty.c
+• https://dirtycow.ninja/
+
+• https://github.com/FireFart/dirtycow/blob/master/dirty.c
 
 
 ```
