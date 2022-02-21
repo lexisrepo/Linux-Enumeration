@@ -56,7 +56,7 @@ sudo mail --exec='!/bin/bash'
 
 ## DirtyCow
 
-Exploit: Linux Kernel 2.6.22 > 3.9
+Exploit: Linux Kernel 2.6.22 < 3.9
 
 • https://dirtycow.ninja/
 
