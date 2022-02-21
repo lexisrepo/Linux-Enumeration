@@ -72,7 +72,7 @@ chmod +x dirty
 ./dirty
 Please enter the new password: lexiswashere
 
-➤ Privesc
+➤ 4. Privesc
 su firefart
 Password: lexiswashere
 
