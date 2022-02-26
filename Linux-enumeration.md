@@ -65,10 +65,17 @@ cat /etc/ssh/ssh_host_key
 
 ## Automated enumeration
 
+LinEnum :
 <https://github.com/rebootuser/LinEnum>
 
+Linprivchecker.py :
 <https://github.com/reider-roque/linpostexp/blob/master/linprivchecker.py>
 
+Unix-privesc-check :
 <http://pentestmonkey.net/tools/audit/unix-privesc-check>
 
+Linuxpriveschecker.py :
 <https://raw.githubusercontent.com/swarley7/linuxprivchecker/master/linuxprivchecker.py>
+
+LinPeas.exe :
+<https://github.com/carlospolop/PEASS-ng/releases/tag/20220220>
